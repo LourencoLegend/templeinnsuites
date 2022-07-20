@@ -1,74 +1,63 @@
-const requestURL = 'https://raw.githubusercontent.com/carterlan/wdd230/main/chamber/data.json';
-const cards = document.querySelector('.cards');
 
 
-function displayMembers(member) {
-    // Create elements to add to the document
-    let card = document.createElement('section');
-    card.classList.add('spotlight');
-    let name = document.createElement('h2');
-    let address = document.createElement('h4');
-    let phone = document.createElement('h4');
-    let email = document.createElement('h4');
-    let website = document.createElement('a');
-    let memberlevel = document.createElement('h2');
-    memberlevel.classList.add('levels');
-    let logo = document.createElement('img');
+const requestURL = 'https://emt0rres.github.io/wdd230/templeInnSuites/data/directory.json';
 
-    // Change the textContent property to contain the member's full name, address, phone, email
-    name.textContent = `${member.name}`;
-    address.textContent = `Address: ${member.address}`
-    phone.textContent = `Phone Number: ${member.phone}`
-    email.textContent = `Email: ${member.email}`
-    memberlevel.textContent = `${member.memberlevel} Member`
-    website.href= member.website
-    website.textContent =(`${member.name}`)
-    // Build the image attributes by using the setAttribute method for the src, alt, and loading attribute values. (Fill in the blank with the appropriate variable).
-    logo.setAttribute('src', member.imageurl);
-    logo.setAttribute('alt', `Logo of ${member.name}`);
-    logo.setAttribute('loading', 'lazy');
-  
-    // Add/append the section(card) with the h2 element
-    card.appendChild(name);
-    card.appendChild(address);
-    card.appendChild(phone);
-    card.appendChild(email);
-    card.appendChild(website);
-    card.appendChild(memberlevel);
-    card.appendChild(logo);
-  
-    // Add/append the existing HTML div with the cards class with the section(card)
-    document.querySelector('div.cards').appendChild(card);
-
-}
+const cards = document.querySelector('div.templeCards');
 
 fetch(requestURL)
   .then(function (response) {
     return response.json();
   })
   .then(function (jsonObject) {
-    //console.table(jsonObject);  // temporary checking for valid response and data parsing
-    const members = jsonObject['members'];
-    members.forEach(displayMembers);
-});
+    console.table(jsonObject);
+    const temples = jsonObject['temples'];
+    temples.forEach(displayTemples);
+  });
 
-//Grid versus List Action
-const gridbutton = document.querySelector("#grid");
-const listbutton = document.querySelector("#list");
-const display = document.querySelector("article");
+function displayTemples(temple) {
+    
+    let card = document.createElement('section');
+    let templeImg = document.createElement('img');
 
-// The following code could be written cleaner. How? We may have to simplfiy our HTMl and think about a default view.
+    let templeName = document.createElement('h3');
+    let countryName = document.createElement('h4');
 
-gridbutton.addEventListener("click", () => {
-	// example using arrow function
-	display.classList.add("grid");
-	display.classList.remove("list");
-});
+    let templeAddress = document.createElement('p');
+    let templePhone = document.createElement('p');
+    let templeClosures = document.createElement('p');
 
-listbutton.addEventListener("click", showList); // example using defined function
+    let templeWebsite = document.createElement('a');
+    
+    
+    templeName.innerHTML = `${temple.name}`;
+    countryName.innerHTML = `Country: ${temple.country}`;
+    templeAddress.innerHTML = `Address: ${temple.address}`;
+    templePhone.innerHTML = `Phone Number: ${temple.phone}`;
+    templeClosures.innerHTML = `Closures: ${temple.closures}`;
+    templeWebsite.innerHTML = `${temple.website}`;
+    
 
-function showList() {
-	display.classList.add("list");
-	display.classList.remove("grid");
-
+    templeImg.setAttribute('src', temple.imageurl);
+    templeImg.setAttribute('alt', 'Image of ' + `${temple.name}`);
+    templeImg.setAttribute('loading', 'lazy');
+    templeWebsite.setAttribute('href', `${temple.website}`)
+    
+    card.appendChild(templeImg);
+    card.appendChild(templeName);
+    card.appendChild(countryName);
+    card.appendChild(templeAddress);
+    card.appendChild(templePhone);
+    card.appendChild(templeClosures);
+    card.appendChild(templeWebsite);
+    
+    cards.appendChild(card);
 }
+
+const gridView = document.querySelector('.gridViewbtn');
+const listView = document.querySelector('.listViewbtn');
+
+gridView.addEventListener('click', () => {cards.classList.add('templeCards')}, once="true");
+gridView.addEventListener('click', () => {cards.classList.remove('switchListView')}, once="true");
+
+listView.addEventListener('click', () => {cards.classList.add('switchListView')}, once="true");
+listView.addEventListener('click', () => {cards.classList.remove('templeCards')}, once="true");
