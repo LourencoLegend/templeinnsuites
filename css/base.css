@@ -3,6 +3,21 @@
 /*=============================================
 =                  All Elements               =
 =============================================*/
+/* CSS HEX */
+--white: #ffffffff;
+--bisque: #ffe8d1ffff;
+--blue-munsell: #568ea3ff;
+--middle-blue: #68c3d4ff;
+--raw-umber: #826251ff;
+
+/* CSS HSL */
+--white: hsla(0, 0%, 100%, 1);
+--bisque: hsla(30, 100%, 91%, 1);
+--blue-munsell: hsla(196, 31%, 49%, 1);
+--middle-blue: hsla(189, 56%, 62%, 1);
+--raw-umber: hsla(21, 23%, 41%, 1);
+
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -15,7 +30,7 @@
   }
   
   header, footer {
-    background-color: #32657F;
+    background-color: #568ea3ff;
     color: white;
     text-align: center;
   }
@@ -26,7 +41,7 @@
   /* nav menu */
   .topnav {
     overflow: hidden;
-    background-color: #32657F;
+    background-color: #568ea3ff;
     position: relative;
   }
   
@@ -58,7 +73,7 @@
   
   /* Active "link" */
   .active {
-    background-color: #32657F;
+    background-color: #568ea3ff;
     color: white;
     padding: 20px;
     grid-column: span 2;
@@ -87,7 +102,7 @@
   
   /* Hamburger Menu */
   .topnav a.icon {
-    background: #32657F;
+    background: #568ea3ff;
     display: block;
     position: absolute;
     right: 0;
@@ -96,12 +111,12 @@
   
   /* Hover */
   .topnav a:hover {
-    background-color: #32657F;
+    background-color: #568ea3ff;
     color: white;
   }
   
   .alert {
-    background-color: #E5A988;
+    background-color: #ffe8d1ff;
     width: 100%;
     padding: 15px;
   }
@@ -114,14 +129,14 @@
   }
   
   .footerb {
-    background-color: #32657F;
+    background-color: #568ea3ff;
     padding: 10px;
   }
   
   .blue-background {
     width: 100%;
     height: 40px;
-    background-color: #89B5C3;
+    background-color: #68c3d4ff;
   }
   
   h1 {
@@ -147,7 +162,7 @@
   button {
     width: 200px;
     height: 35px;
-    background-color: #E5A988;
+    background-color: #ffe8d1ff;
     color: white;
     border-radius: 2rem;
     border-style: none;
@@ -179,7 +194,7 @@
   
   .two, .three, .four, .five, .six, .eight {
     border: 2px dotted;
-    border-color: #32657F;
+    border-color: #568ea3ff;
     border-radius: 8px;
   }
   
@@ -229,7 +244,7 @@
     height: 20px;
     width: 20px;
     margin: 0 3px;
-    background-color: #89B5C3;
+    background-color: #68c3d4ff;
     border-radius: 50%;
     display: inline-block;
     transition: 0.5s ease;
@@ -241,7 +256,7 @@
   }
   
   .enable, .dots:hover {
-    background-color: #32657F;
+    background-color: #568ea3ff;
   }
   /* Box five */
   .foto-container{
@@ -280,7 +295,7 @@
   
   .temple-box {
     padding: 10px;
-    background-color: #89B5C3;
+    background-color: #68c3d4ff;
     border-radius: 8px;
   }
   
@@ -303,7 +318,7 @@
   
   /* Box seven */
   .weather {
-    background-color: #E5A988;
+    background-color: #ffe8d1ff;
     border-radius: 8px;
   }
   
