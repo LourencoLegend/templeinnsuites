@@ -1,0 +1,9 @@
+{
+    "liveshare.allowGuestTaskControl": true,
+    "liveshare.allowGuestDebugControl": true,
+    "liveshare.guestApprovalRequired": true,
+    "liveshare.publishWorkspaceInfo": true,
+    "prettier.resolveGlobalModules": true,
+    "prettier.withNodeModules": true,
+    "terminal.integrated.shellIntegration.enabled": true
+}
