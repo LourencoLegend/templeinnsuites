@@ -3,19 +3,12 @@
 /*=============================================
 =                  All Elements               =
 =============================================*/
-/* CSS HEX */
+/* CSS HEX 
 --white: #ffffffff;
 --bisque: #ffe8d1ffff;
 --blue-munsell: #568ea3ff;
 --middle-blue: #68c3d4ff;
---raw-umber: #826251ff;
-
-/* CSS HSL */
---white: hsla(0, 0%, 100%, 1);
---bisque: hsla(30, 100%, 91%, 1);
---blue-munsell: hsla(196, 31%, 49%, 1);
---middle-blue: hsla(189, 56%, 62%, 1);
---raw-umber: hsla(21, 23%, 41%, 1);
+--raw-umber: #826251ff; */
 
 
 * {
@@ -24,432 +17,439 @@
     padding: 0;
     font-family: 'Barlow', sans-serif, Arial;
   }
-  
-  img {
-    width: 100%;
-  }
-  
-  header, footer {
-    background-color: #568ea3ff;
-    color: white;
-    text-align: center;
-  }
-  
-  /*----------  Header  ----------*/
-  /* title, logo, nav links, hamburger menu icon, light blue line, and weather alert*/
-  
-  /* nav menu */
-  .topnav {
-    overflow: hidden;
-    background-color: #568ea3ff;
-    position: relative;
-  }
-  
-  /* class = title */
-  /* logo and title */
-  .title {
-    padding: 10px;
-  }
-  
-  .hamburger-icon {
-    display: grid;
-    grid-template-columns: 1fr;
-  }
-  
-  #hamburger {
-    height: 64px;
-    width: 64px;
-    cursor: pointer;
-    padding: 10px;
-    grid-column: 2/3;
-  }
-  
-  .flex {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  /* Active "link" */
-  .active {
-    background-color: #568ea3ff;
-    color: white;
-    padding: 20px;
-    grid-column: span 2;
-    grid-row: 3/4;
-  }
-  
-  #logo {
-    height: 100px;
-    width: 100px;
-  }
-  
-  /* id = myNavLinks */
-  /* hides links */
-  .topnav #myNavLinks {
-    display: none;
-  }
-  
-  /* Nav links */
-  .topnav a {
-    color: white;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-    display: block;
-  }
-  
-  /* Hamburger Menu */
-  .topnav a.icon {
-    background: #568ea3ff;
-    display: block;
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-  
-  /* Hover */
-  .topnav a:hover {
-    background-color: #568ea3ff;
-    color: white;
-  }
-  
-  .alert {
-    background-color: #ffe8d1ff;
-    width: 100%;
-    padding: 15px;
-  }
-  
-  #close {
-    height: 20px;
-    width: 20px;
-    float: left;
-    cursor: pointer;
-  }
-  
-  .footerb {
-    background-color: #568ea3ff;
-    padding: 10px;
-  }
-  
-  .blue-background {
-    width: 100%;
-    height: 40px;
-    background-color: #68c3d4ff;
-  }
-  
-  h1 {
-    font-weight: 800;
-  }
-  
-  h2{
-    font-weight: 500;
-    padding: 10px;
-  }
-  
-  h3 {
-    font-weight: 400;
-  }
-  
-  h4 {
-    font-weight: 300;
-  }
-  
-  
-  /*----------  Main  ----------*/
-  /* title, logo, nav links, hamburger menu icon, light blue line, and weather alert*/
-  button {
-    width: 200px;
-    height: 35px;
-    background-color: #ffe8d1ff;
-    color: white;
-    border-radius: 2rem;
-    border-style: none;
-    cursor: pointer;
-  }
-  
-  button a {
-    font-weight: 400;
-    font-size: 20px;
-    text-decoration: none;
-    color: white;
-  }
-  
-  button a:hover {
-    color: black;
-  }
-  
-  /*=====  End of All Elements  ======*/
-  
-  
-  /*=============================================
-  =            Home Elements                    =
-  =============================================*/
-  .box {
-    margin: 10px;
-    padding: 5px;
-    text-align: center;
-  }
-  
-  .two, .three, .four, .five, .six, .eight {
-    border: 2px dotted;
-    border-color: #568ea3ff;
-    border-radius: 8px;
-  }
-  
-  /* Box one */
-  
-  
-  /* Box two */
-  
-  
-  /* Box three */
-  
-  
-  /* Box four */
-  .slideshow {
-    max-width: 1000px;
-    position: relative;
-    margin: auto;
-  }
-  
-  .img-box {
-    display: none;
-  }
-  
-  .caption {
-    color: #000000;
-    background-color: rgba(255, 255, 255, 0.461);
-    width: 200px;
-    font-size: 16px;
-    padding: 14px;
-    position: absolute;
-    bottom: 10px;
-    left: 10px;
-    text-align: center;
-    border-radius: 8px;
-  }
-  
-  .pg-num {
-    color: #ececed;
-    font-size: 14px;
-    padding: 10px 14px;
-    position: absolute;
-    top: 0;
-  }
-  
-  .dots {
-    cursor: pointer;
-    height: 20px;
-    width: 20px;
-    margin: 0 3px;
-    background-color: #68c3d4ff;
-    border-radius: 50%;
-    display: inline-block;
-    transition: 0.5s ease;
-  }
-  
-  .three-dots {
-    padding: 10px;
-    text-align: center;
-  }
-  
-  .enable, .dots:hover {
-    background-color: #568ea3ff;
-  }
-  /* Box five */
-  .foto-container{
-    display: flex;
-    flex-direction: column;
-  }
-  .photo{
-    padding: 8px;
-  }
-  .photo img{
-    width: 340px;
-    box-shadow: 5px 5px #dedede;
-  }
-  
-  .img-caption {
-    padding: 8px;
-  }
-  /* Box six */
-  .six-temple{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 50px 1fr 1fr;
-    padding: 10px;
-    gap: 9px;
-  }
-  
-  .temple-top{
-    padding: 8px;
-    grid-column: span 2;
-  }
-  
-  .six p {
-    font-weight: 300;
-    padding: 2px;
-  }
-  
-  .temple-box {
-    padding: 10px;
-    background-color: #68c3d4ff;
-    border-radius: 8px;
-  }
-  
-  .temple-bottom{
-    grid-column: span 2;
-    text-align: center;
-  }
-  
-  .temple-left{
-    grid-column: 2/3;
-    grid-row: 2/3;
-    text-align: center;
-  }
-  
-  .temple-right{
-    grid-column: 1/2;
-    grid-row: 2/3;
-    text-align: center;
-  }
-  
-  /* Box seven */
-  .weather {
-    background-color: #ffe8d1ff;
-    border-radius: 8px;
-  }
-  
-  /* Box eight */
-  
-  
-  /*=====  End of Home Elements  ======*/
-  
-  
-  /*=============================================
-  =            Temple Elements                  =
-  =============================================*/
-  .view{
-    margin: 10px;
-  }
-  
-  .templeCards {
-    display: grid;
-    grid-template-columns: 1fr;
-    justify-items: center;
-  }
-  
-  .templeCards section {
-    background-color: rgb(255, 255, 255);
-    border: 3px solid rgb(200, 65, 16);
-    width: 350px;
-    margin: 9px;
-    padding: 10px;
-    border-radius: 10px;
-    text-align: center;
-  
-  }
-  .templeCards section p {
-    width: 320px;
-    padding: 3px;
-  }
-  
-  .templeCards img {
-    width: 200px;
-  }
-  
-  .templeCards section p:first-child {
-    font-size: 16px;
-  }
-  
-  .templeCards a:hover{
-    color: rgb(253, 187, 20);
-    text-decoration: none;
-  }
-  
-  .switchListView {
-    display: block;
-  }
-  
-  .switchListView img {
-    display: none;
-  }
-  
-  .switchListView section {
-    width: 100%;
-    display: grid;
-    padding: 10px;
-    font-size: 14px;
-    text-align: center;
-    margin: 10px
-  }
-  
-  .switchListView section p1, .switchListView section p2  {
-    text-align: center;
-    padding: 9px;
-  }
-  .switchListView section a, .businessCards section a {
-    color: blue;
-    align-self: center;
-  }
-  
-  .switchListView section{
-    border: 3px solid rgb(200, 65, 16);
-    border-radius: 10px;
-  }
-  
-  .switchListView section:first-child {
-    background-color: rgb(255, 255, 255);
-  }
-  
-  .switchListView section:nth-child(even) {
-    background-color: rgb(255, 255, 255);
-  }
-  
-  .switchListView section:nth-child(odd) {
-    background-color: rgb(200, 65, 16);
-    color:rgb(255, 255, 255);
-  }
-  
-  .switchListView section:nth-child(odd) a{
-    color:rgb(255, 255, 255);
-  }
-  
-  .switchListView section:nth-child(odd) a:hover,
-  .switchListView section:nth-child(even) a:hover{
-    color: rgb(253, 187, 20);
-    text-decoration: none;
-  }
-  
-  .selectViewDirectory ul {
-    display: flex;
-    justify-content: center;
-    font-size: 16px;
-  }
-  
-  .selectViewDirectory ul li {
-    margin: 5px;
-  }
-  
-  .selectViewDirectory a {
-  color: rgb(0, 0, 0);
-  }
-  
-  .selectViewDirectory li {
-    list-style: none;
-  }
-  
-  .gridViewbtn a,
-  .listViewbtn a {
-    text-decoration: none;
-    background-color: rgb(90, 126, 173);
-    color:rgb(255, 255, 255);
-    padding: 10px;
-    border-radius: 10px;
-  
-  }
-  
-  
-  /*=====  End of Temple Elements  ======*/
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Barlow', sans-serif, Arial;
+}
+
+img {
+  width: 100%;
+}
+
+header, footer {
+  background-color: #32657F;
+  color: white;
+  text-align: center;
+}
+
+/*----------  Header  ----------*/
+/* title, logo, nav links, hamburger menu icon, light blue line, and weather alert*/
+
+/* nav menu */
+.topnav {
+  overflow: hidden;
+  background-color: #32657F;
+  position: relative;
+}
+
+/* class = title */
+/* logo and title */
+.title {
+  padding: 10px;
+}
+
+.hamburger-icon {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+#hamburger {
+  height: 64px;
+  width: 64px;
+  cursor: pointer;
+  padding: 10px;
+  grid-column: 2/3;
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Active "link" */
+.active {
+  background-color: #32657F;
+  color: white;
+  padding: 20px;
+  grid-column: span 2;
+  grid-row: 3/4;
+}
+
+#logo {
+  height: 100px;
+  width: 100px;
+}
+
+/* id = myNavLinks */
+/* hides links */
+.topnav #myNavLinks {
+  display: none;
+}
+
+/* Nav links */
+.topnav a {
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  display: block;
+}
+
+/* Hamburger Menu */
+.topnav a.icon {
+  background: #32657F;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+/* Hover */
+.topnav a:hover {
+  background-color: #32657F;
+  color: white;
+}
+
+.alert {
+  background-color: #E5A988;
+  width: 100%;
+  padding: 15px;
+}
+
+#close {
+  height: 20px;
+  width: 20px;
+  float: left;
+  cursor: pointer;
+}
+
+.footerb {
+  background-color: #32657F;
+  padding: 10px;
+}
+
+.blue-background {
+  width: 100%;
+  height: 40px;
+  background-color: #89B5C3;
+}
+
+h1 {
+  font-weight: 800;
+}
+
+h2{
+  font-weight: 500;
+  padding: 10px;
+}
+
+h3 {
+  font-weight: 400;
+}
+
+h4 {
+  font-weight: 300;
+}
+
+
+/*----------  Main  ----------*/
+/* title, logo, nav links, hamburger menu icon, light blue line, and weather alert*/
+button {
+  width: 200px;
+  height: 35px;
+  background-color: #E5A988;
+  color: white;
+  border-radius: 2rem;
+  border-style: none;
+  cursor: pointer;
+}
+
+button a {
+  font-weight: 400;
+  font-size: 20px;
+  text-decoration: none;
+  color: white;
+}
+
+button a:hover {
+  color: black;
+}
+
+/*=====  End of All Elements  ======*/
+
+
+/*=============================================
+=            Home Elements                    =
+=============================================*/
+.box {
+  margin: 10px;
+  padding: 5px;
+  text-align: center;
+}
+
+.two, .three, .four, .five, .six, .eight {
+  border: 2px dotted;
+  border-color: #32657F;
+  border-radius: 8px;
+}
+
+/* Box one */
+
+
+/* Box two */
+
+
+/* Box three */
+
+
+/* Box four */
+.slideshow {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+.img-box {
+  display: none;
+}
+
+.caption {
+  color: #000000;
+  background-color: rgba(255, 255, 255, 0.461);
+  width: 200px;
+  font-size: 16px;
+  padding: 14px;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  text-align: center;
+  border-radius: 8px;
+}
+
+.pg-num {
+  color: #ececed;
+  font-size: 14px;
+  padding: 10px 14px;
+  position: absolute;
+  top: 0;
+}
+
+.dots {
+  cursor: pointer;
+  height: 20px;
+  width: 20px;
+  margin: 0 3px;
+  background-color: #89B5C3;
+  border-radius: 50%;
+  display: inline-block;
+  transition: 0.5s ease;
+}
+
+.three-dots {
+  padding: 10px;
+  text-align: center;
+}
+
+.enable, .dots:hover {
+  background-color: #32657F;
+}
+/* Box five */
+.foto-container{
+  display: flex;
+  flex-direction: column;
+}
+.photo{
+  padding: 8px;
+}
+.photo img{
+  width: 340px;
+  box-shadow: 5px 5px #dedede;
+}
+
+.img-caption {
+  padding: 8px;
+}
+/* Box six */
+.six-temple{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 50px 1fr 1fr;
+  padding: 10px;
+  gap: 9px;
+}
+
+.temple-top{
+  padding: 8px;
+  grid-column: span 2;
+}
+
+.six p {
+  font-weight: 300;
+  padding: 2px;
+}
+
+.temple-box {
+  padding: 10px;
+  background-color: #89B5C3;
+  border-radius: 8px;
+}
+
+.temple-bottom{
+  grid-column: span 2;
+  text-align: center;
+}
+
+.temple-left{
+  grid-column: 2/3;
+  grid-row: 2/3;
+  text-align: center;
+}
+
+.temple-right{
+  grid-column: 1/2;
+  grid-row: 2/3;
+  text-align: center;
+}
+
+/* Box seven */
+.weather {
+  background-color: #E5A988;
+  border-radius: 8px;
+}
+
+/* Box eight */
+
+
+/*=====  End of Home Elements  ======*/
+
+
+/*=============================================
+=            Temple Elements                  =
+=============================================*/
+.view{
+  margin: 10px;
+}
+
+.templeCards {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+}
+
+.templeCards section {
+  background-color: rgb(255, 255, 255);
+  border: 3px solid rgb(200, 65, 16);
+  width: 350px;
+  margin: 9px;
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+
+}
+.templeCards section p {
+  width: 320px;
+  padding: 3px;
+}
+
+.templeCards img {
+  width: 200px;
+}
+
+.templeCards section p:first-child {
+  font-size: 16px;
+}
+
+.templeCards a:hover{
+  color: rgb(253, 187, 20);
+  text-decoration: none;
+}
+
+.switchListView {
+  display: block;
+}
+
+.switchListView img {
+  display: none;
+}
+
+.switchListView section {
+  width: 100%;
+  display: grid;
+  padding: 10px;
+  font-size: 14px;
+  text-align: center;
+  margin: 10px
+}
+
+.switchListView section p1, .switchListView section p2  {
+  text-align: center;
+  padding: 9px;
+}
+.switchListView section a, .businessCards section a {
+  color: blue;
+  align-self: center;
+}
+
+.switchListView section{
+  border: 3px solid rgb(200, 65, 16);
+  border-radius: 10px;
+}
+
+.switchListView section:first-child {
+  background-color: rgb(255, 255, 255);
+}
+
+.switchListView section:nth-child(even) {
+  background-color: rgb(255, 255, 255);
+}
+
+.switchListView section:nth-child(odd) {
+  background-color: rgb(200, 65, 16);
+  color:rgb(255, 255, 255);
+}
+
+.switchListView section:nth-child(odd) a{
+  color:rgb(255, 255, 255);
+}
+
+.switchListView section:nth-child(odd) a:hover,
+.switchListView section:nth-child(even) a:hover{
+  color: rgb(253, 187, 20);
+  text-decoration: none;
+}
+
+.selectViewDirectory ul {
+  display: flex;
+  justify-content: center;
+  font-size: 16px;
+}
+
+.selectViewDirectory ul li {
+  margin: 5px;
+}
+
+.selectViewDirectory a {
+color: rgb(0, 0, 0);
+}
+
+.selectViewDirectory li {
+  list-style: none;
+}
+
+.gridViewbtn a,
+.listViewbtn a {
+  text-decoration: none;
+  background-color: rgb(90, 126, 173);
+  color:rgb(255, 255, 255);
+  padding: 10px;
+  border-radius: 10px;
+
+}
+
+
+/*=====  End of Temple Elements  ======*/
