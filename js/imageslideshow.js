@@ -1,30 +1,28 @@
-let imagePosition = 1;
-imageSlideshow(imagePosition);
+var slideIndex = 1;
+showSlides(slideIndex);
 
-function currentImage(n) {
-  imageSlideshow(imagePosition += n);
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
 }
 
-function currentImage(n) {
-  imageSlideshow(imagePosition = n);
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
 }
 
-function imageSlideshow(n) {
-  let i;
-  
-  let images = document.getElementsByClassName("img-box");
-  let dots = document.getElementsByClassName("dots");
-  
-  if (n > images.length) {imagePosition = 1}
-  
-  if (n < 1) {imagePosition = images.length}
-  
-  for (i = 0; i < images.length; i++) {
-    images[i].style.display = "none";
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("slideshow");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1} 
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none"; 
   }
   for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" enable", "");
+      dots[i].className = dots[i].className.replace(" active", "");
   }
-  images[imagePosition-1].style.display = "block";
-  dots[imagePosition-1].className += " enable";
-} 
+  slides[slideIndex-1].style.display = "block"; 
+  dots[slideIndex-1].className += " active";
+}

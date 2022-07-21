@@ -1,5 +1,3 @@
-
-
 const requestURL = 'https://emt0rres.github.io/wdd230/templeInnSuites/data/directory.json';
 
 const cards = document.querySelector('div.templeCards');
@@ -16,26 +14,22 @@ fetch(requestURL)
 
 function displayTemples(temple) {
     
+  // Create elements to add to the document
     let card = document.createElement('section');
     let templeImg = document.createElement('img');
-
     let templeName = document.createElement('h3');
     let countryName = document.createElement('h4');
-
     let templeAddress = document.createElement('p');
     let templePhone = document.createElement('p');
-    let templeClosures = document.createElement('p');
-
     let templeWebsite = document.createElement('a');
-    
+    let templeClosures = document.createElement('p');
     
     templeName.innerHTML = `${temple.name}`;
-    countryName.innerHTML = `Country: ${temple.country}`;
-    templeAddress.innerHTML = `Address: ${temple.address}`;
-    templePhone.innerHTML = `Phone Number: ${temple.phone}`;
-    templeClosures.innerHTML = `Closures: ${temple.closures}`;
+    countryName.innerHTML = `${temple.country}`;
+    templeAddress.innerHTML = `${temple.address}`;
+    templePhone.innerHTML = `${temple.phone}`;
     templeWebsite.innerHTML = `${temple.website}`;
-    
+    templeClosures.innerHTML = `${temple.closures}`;
 
     templeImg.setAttribute('src', temple.imageurl);
     templeImg.setAttribute('alt', 'Image of ' + `${temple.name}`);
@@ -47,8 +41,8 @@ function displayTemples(temple) {
     card.appendChild(countryName);
     card.appendChild(templeAddress);
     card.appendChild(templePhone);
-    card.appendChild(templeClosures);
     card.appendChild(templeWebsite);
+    card.appendChild(templeClosures);
     
     cards.appendChild(card);
 }
