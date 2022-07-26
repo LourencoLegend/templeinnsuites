@@ -13,12 +13,15 @@
     <link rel="stylesheet" href="css/base.css" />
     <link rel="stylesheet" href="css/medium.css" />
     <link rel="stylesheet" href="css/large.css" />
-    <link rel="stylesheet" type="text/css" href="styles/normalize.css">
+    <link rel="stylesheet" type="text/css" href="styles/normalize.css" />
 
     <!--Fonts-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Sansita&family=Ubuntu:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sansita&family=Ubuntu:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
 
     <title>Temple Inn and Suites</title>
   </head>
@@ -58,7 +61,7 @@
 
       <div class="blue-background"></div>
     </header>
-    
+
     <main>
       <div class="box one">
         <img src="images/hotel.jpeg" alt="Hotel Image" />
@@ -66,113 +69,162 @@
 
       <div class="box two">
         <h2>Save time and money!<br />Book your next temple trip today!</h2>
-        <button><a href="">Book Today!</a></button>
+        <a href="reservation.html">Book Today!</a>
       </div>
 
       <div class="box three">
         <h2>Amenities</h2>
-        <button><a href="">More Info</a></button>
+        <a href="services.html">More Info</a>
       </div>
 
       <div class="box four">
         <h2>Rooms</h2>
+      </div>
+      <!-- START SLIDESHOW HTML -->
+      <div class="container">
+        <h2>Slideshow Indicators</h2>
+      </div>
 
-        <!-- START SLIDESHOW HTML -->
-        <div class="container">
-          <h2>Slideshow Indicators</h2>
-        </div>
-        
-        <div class="content display-container" style="max-width:800px">
-          <img class="mySlides" src="images/rooms/serenity_room.jpeg" alt="Couple's Room="style="width:100%">
-          <img class="mySlides" src="images/rooms/peace_room.jpeg" alt="Newly Wed's Room="style="width:100%">
-          <img class="mySlides" src="images/rooms/cloud_room.jpeg" alt="Family Room="style="width:100%">
-          <div class="center container section large text-white display-bottommiddle" style="width:100%">
-            <div class="left hover-text-khaki" onclick="plusDivs(-1)">&#10094;</div>
-            <div class="right hover-text-khaki" onclick="plusDivs(1)">&#10095;</div>
-            <span class="badge demo border transparent hover-white" onclick="currentDiv(1)"></span>
-            <span class="badge demo border transparent hover-white" onclick="currentDiv(2)"></span>
-            <span class="badge demo border transparent hover-white" onclick="currentDiv(3)"></span>
+      <div class="content display-container" style="max-width: 800px">
+        <img
+          class="mySlides"
+          src="images/rooms/serenity_room.jpeg"
+          alt="Couple's Room="
+          style="width: 100%"
+        />
+        <img
+          class="mySlides"
+          src="images/rooms/peace_room.jpeg"
+          alt="Newly Wed's Room="
+          style="width: 100%"
+        />
+        <img
+          class="mySlides"
+          src="images/rooms/cloud_room.jpeg"
+          alt="Family Room="
+          style="width: 100%"
+        />
+        <div
+          class="center container section large text-white display-bottommiddle"
+          style="width: 100%"
+        >
+          <div class="left hover-text-khaki" onclick="plusDivs(-1)">
+            &#10094;
           </div>
+          <div class="right hover-text-khaki" onclick="plusDivs(1)">
+            &#10095;
+          </div>
+          <span
+            class="badge demo border transparent hover-white"
+            onclick="currentDiv(1)"
+          ></span>
+          <span
+            class="badge demo border transparent hover-white"
+            onclick="currentDiv(2)"
+          ></span>
+          <span
+            class="badge demo border transparent hover-white"
+            onclick="currentDiv(3)"
+          ></span>
         </div>
-        
-        <script>
+      </div>
+
+      <script>
         var slideIndex = 1;
         showDivs(slideIndex);
-        
+
         function plusDivs(n) {
-          showDivs(slideIndex += n);
+          showDivs((slideIndex += n));
         }
-        
+
         function currentDiv(n) {
-          showDivs(slideIndex = n);
+          showDivs((slideIndex = n));
         }
-        
+
         function showDivs(n) {
           var i;
           var x = document.getElementsByClassName("mySlides");
           var dots = document.getElementsByClassName("demo");
-          if (n > x.length) {slideIndex = 1}
-          if (n < 1) {slideIndex = x.length}
+          if (n > x.length) {
+            slideIndex = 1;
+          }
+          if (n < 1) {
+            slideIndex = x.length;
+          }
           for (i = 0; i < x.length; i++) {
-            x[i].style.display = "none";  
+            x[i].style.display = "none";
           }
           for (i = 0; i < dots.length; i++) {
             dots[i].className = dots[i].className.replace(" white", "");
           }
-          x[slideIndex-1].style.display = "block";  
-          dots[slideIndex-1].className += " white";
+          x[slideIndex - 1].style.display = "block";
+          dots[slideIndex - 1].className += " white";
         }
-        </script>
+      </script>
 
-    <!-- END SLIDESHOW GALLERY HTML -->
+      <!-- END SLIDESHOW GALLERY HTML -->
 
       <div class="box five">
         <h2>Temple Activities</h2>
         <div class="foto-container">
           <div class="photo left">
-            <img src="images/temple-activities/Temple_wedding.jpeg" alt="Weddings" />
-            
+            <img
+              src="images/temple-activities/Temple_wedding.jpeg"
+              alt="Weddings"
+            />
           </div>
 
           <div class="photo top-middle">
-            <img src="images/temple-activities/Family_History.jpeg"alt="Family History"/>
-          
+            <img
+              src="images/temple-activities/Family_History.jpeg"
+              alt="Family History"
+            />
           </div>
 
           <div class="photo bottom-middle">
-            <img src="images/temple-activities/Temple_garden.jpeg" alt="Gardens" />
-         
+            <img
+              src="images/temple-activities/Temple_garden.jpeg"
+              alt="Gardens"
+            />
           </div>
 
           <div class="img-caption">
-            <img src="images/temple-activities/Christ.jpeg" alt="Come unto Christ"/>
-            
+            <img
+              src="images/temple-activities/Christ.jpeg"
+              alt="Come unto Christ"
+            />
           </div>
         </div>
       </div>
 
       <div class="box temple-img six">
         <h2>Temple of the Day</h2>
-        <img src="images/temples/recife.jpeg"alt="LDS Recife Temple" />
+        <img src="images/temples/recife.jpeg" alt="LDS Recife Temple" />
         <div class="six-temple">
           <h3 class="temple-box temple-top">Recife Temple</h3>
           <div class="temple-box temple-left">
             <h4>Address</h4>
-            <p>R. Dr. José de Góes, 280 
-              <br>
-              Parnamirim              <br>
-              Recife - PE, 52060-380, Brazil            </p>
+            <p>
+              R. Dr. José de Góes, 280
+              <br />
+              Parnamirim <br />
+              Recife - PE, 52060-380, Brazil
+            </p>
           </div>
 
           <div class="temple-box temple-bottom">
             <h4>Temple Ordinances</h4>
-            <p>Currently Phase 3: All living ordinances and limited proxy ordinances.</p>
+            <p>
+              Currently Phase 3: All living ordinances and limited proxy
+              ordinances.
+            </p>
             <p>All ordinances are only available by appointment.</p>
-            <p>Patrons are highly encouraged to bring their own temple clothing.</p>
+            <p>
+              Patrons are highly encouraged to bring their own temple clothing.
+            </p>
           </div>
 
           <div class="temple-box temple-right">
-
             <h4>Temple Closures for 2022</h4>
             <p>Saturday, 1 October 2022</p>
             <p>Monday, 3 October 2022 - Monday, 17 October 2022</p>
@@ -180,20 +232,46 @@
             <p>Saturday, 31 December 2022</p>
           </div>
         </div>
-  
-        <button><a href="">See More Temples!</a></button>
       </div>
 
       <div id="openweathermap-widget-5"></div>
-<script>window.myWidgetParam ? window.myWidgetParam : window.myWidgetParam = [];  window.myWidgetParam.push({id: 5,cityid: '3390760',appid: '4a560932da68c6d09051ac9825c6d318',units: 'imperial',containerid: 'openweathermap-widget-5',  });  (function() {var script = document.createElement('script');script.async = true;script.charset = "utf-8";script.src = "//openweathermap.org/themes/openweathermap/assets/vendor/owm/js/weather-widget-generator.js";var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(script, s);  })();</script>
+      <script>
+        window.myWidgetParam
+          ? window.myWidgetParam
+          : (window.myWidgetParam = []);
+        window.myWidgetParam.push({
+          id: 5,
+          cityid: "3390760",
+          appid: "4a560932da68c6d09051ac9825c6d318",
+          units: "imperial",
+          containerid: "openweathermap-widget-5",
+        });
+        (function () {
+          var script = document.createElement("script");
+          script.async = true;
+          script.charset = "utf-8";
+          script.src =
+            "//openweathermap.org/themes/openweathermap/assets/vendor/owm/js/weather-widget-generator.js";
+          var s = document.getElementsByTagName("script")[0];
+          s.parentNode.insertBefore(script, s);
+        })();
+      </script>
       <div class="box eight">
         <h2>Contact Info</h2>
-        
+
         <p>+(55) 81-2129-4300</p>
-        <p>Rua Dr. José de Góes, 280
-          Parnamirim
-          52060-380 Recife - PE, Brazil</p>
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3950.639374429429!2d-34.9103877!3d-8.0360656!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7ab190099cb992b%3A0x76ee15b5542e4618!2sR.%20Dr.%20Jos%C3%A9%20de%20G%C3%B3es%2C%20280%20-%20Parnamirim%2C%20Recife%20-%20PE%2C%2052060-380%2C%20Brazil!5e0!3m2!1sen!2sus!4v1658367452561!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <p>
+          Rua Dr. José de Góes, 280 Parnamirim 52060-380 Recife - PE, Brazil
+        </p>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3950.639374429429!2d-34.9103877!3d-8.0360656!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7ab190099cb992b%3A0x76ee15b5542e4618!2sR.%20Dr.%20Jos%C3%A9%20de%20G%C3%B3es%2C%20280%20-%20Parnamirim%2C%20Recife%20-%20PE%2C%2052060-380%2C%20Brazil!5e0!3m2!1sen!2sus!4v1658367452561!5m2!1sen!2sus"
+          width="600"
+          height="450"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
       </div>
     </main>
     <footer>
@@ -201,9 +279,9 @@
       <div class="footerb">
         <h2>Location</h2>
         <p>Temple Inn & Suites</p>
-        <p>Rua Dr. José de Góes, 280
-          Parnamirim
-          52060-380 Recife - PE, Brazil</p>
+        <p>
+          Rua Dr. José de Góes, 280 Parnamirim 52060-380 Recife - PE, Brazil
+        </p>
         <p>Headquarters</p>
         <p>4847 Montgomery Ln #300, Bethesda, MD 20814 .Bethesda, MD</p>
         <p>©2022 Lourenco Da Silva | BYU-Idaho</p>

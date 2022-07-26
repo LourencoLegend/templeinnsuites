@@ -13,12 +13,15 @@
     <link rel="stylesheet" href="css/base.css" />
     <link rel="stylesheet" href="css/medium.css" />
     <link rel="stylesheet" href="css/large.css" />
-    <link rel="stylesheet" type="text/css" href="styles/normalize.css">
+    <link rel="stylesheet" type="text/css" href="styles/normalize.css" />
 
     <!--Fonts-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Sansita&family=Ubuntu:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sansita&family=Ubuntu:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
 
     <title>Temple Inn and Suites</title>
   </head>
@@ -60,64 +63,86 @@
     </header>
 
     <main id="form-main">
-      <div class="hero-img"><img src="images/temple-banner-cedar.jpg" alt="draper temple and salt lake valley"></div>
-      <div class="trip-button"><a href="#"><button>Plan A Trip</button></a></div>
+      <div class="hero-img">
+        <img src="images/temples/campinas.jpeg" alt="Campinas Temple" />
+      </div>
       <h2 class="heading1">Book a Trip</h2>
       <div class="form">
-          <form action="#" method="post">
+        <form action="#" method="post">
+          <label for="fname"
+            >First Name: <input type="text" id="fname" name="first_name"
+          /></label>
 
-              <label for="fname">First Name:
-                  <input type="text" id="name" name="first_name"></label>
+          <label for="lname"
+            >Last Name: <input type="text" id="lname" name="last_name"
+          /></label>
 
-              <label for="lname">Last Name:
-                  <input type="text" id="name" name="last_name"></label>
+          <label for="mail"
+            >E-mail:
+            <input
+              type="email"
+              id="mail"
+              name="email"
+              placeholder="JonSmith@email.com"
+          /></label>
 
-              <label for="mail">E-mail:
-                  <input type="email" id="mail" name="email" placeholder="JonSmith@email.com"></label>
+          <label for="phone"
+            >Phone #:
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              placeholder="123-555-6789"
+          /></label>
 
-              <label for="phone">Phone #:
-                  <input type="tel" name="phone" placeholder="123-555-6789"></label>
+          <label
+            >Room Type <input list="roomtype" name="roomtype" />
+            <datalist id="roomtype">
+              <option value="Single Queen"></option>
+              <option value="Double Queen"></option>
+              <option value="Single King"></option>
+              <option value="Suite"></option>
+              <option value="Penthouse"></option>
+            </datalist>
+          </label>
 
-              <label>Room Type <input list="roomtype" name="roomtype">
-                  <datalist id="roomtype">
-                      <option value="Single Queen">
-                      </option><option value="Double Queen">
-                      </option><option value="Single King">
-                      </option><option value="Suite">
-                      </option><option value="Penthouse">
-                  </option></datalist>
-              </label>
+          <label for="rooms"
+            >Number of rooms:
+            <input type="number" id="rooms" name="rooms" required=""
+          /></label>
 
-              <label for="rooms">Number of rooms:
-                  <input type="number" name="rooms" required=""></label>
+          <label for="date"
+            >Day of Arrival:
+            <input type="date" id="date" name="reservationDate"
+          /></label>
 
+          <label class="addComment"
+            >Additional Comments:
+            <textarea
+              name="comment"
+              placeholder="Special accomodation requests or comments . . ."
+            ></textarea>
+          </label>
 
-              <label for="date">Day of Arrival:
-                  <input type="date" id="reservationDate" name="reservationDate"></label>
-
-              <label class="addComment">Additional Comments:
-                  <textarea name="comment" placeholder="Special accomodation requests or comments . . ."></textarea></label>
-
-              <input type="submit" value="Submit">
-
-          </form>
+          <input type="submit" value="Submit" />
+        </form>
       </div>
-  </main>
+    </main>
 
-  <footer>
-    <div class="blue-background"></div>
-    <div class="footerb">
-      <h2>Location</h2>
-      <p>Temple Inn & Suites</p>
-      <p>Rua Dr. José de Góes, 280
-        Parnamirim
-        52060-380 Recife - PE, Brazil</p>
-      <p>Headquarters</p>
-      <p>4847 Montgomery Ln #300, Bethesda, MD 20814 .Bethesda, MD</p>
-      <p>©2022 Lourenco Da Silva | BYU-Idaho</p>
-    </div>
-    <script src="js/index.js"></script>
-    <script src="js/imageslideshow.js"></script>
-  </footer>
-</body>
+    <footer>
+      <div class="blue-background"></div>
+      <div class="footerb">
+        <h2>Location</h2>
+        <p>Temple Inn & Suites</p>
+        <p>
+          Rua Dr. José de Góes, 280 Parnamirim 52060-380 Recife - PE, Brazil
+        </p>
+        <p>Headquarters</p>
+        <p>4847 Montgomery Ln #300, Bethesda, MD 20814 .Bethesda, MD</p>
+        <p>©2022 Lourenco Da Silva | BYU-Idaho</p>
+      </div>
+      <script src="js/index.js"></script>
+      <script src="js/imageslideshow.js"></script>
+    </footer>
+  </body>
 </html>
