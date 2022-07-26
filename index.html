@@ -14,7 +14,6 @@
     <link rel="stylesheet" href="css/medium.css" />
     <link rel="stylesheet" href="css/large.css" />
     <link rel="stylesheet" type="text/css" href="styles/normalize.css">
-    <link href="css/slideshow_styles.css" rel="stylesheet" type="text/css">
 
     <!--Fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -79,136 +78,52 @@
         <h2>Rooms</h2>
 
         <!-- START SLIDESHOW HTML -->
-
-<div class="slideshow-container">
-
-  <div class="mySlides fade">
-
-	<div class="numbertext">1 / 4</div>
-
-	<img src="images/rooms/serenity_room.jpeg" style="width:100%">
-
-	<div class="text">Couple's Room</div>
-
-  </div>
-
-
-
-  <div class="mySlides fade">
-
-	<div class="numbertext">2 / 4</div>
-
-	<img src="images/rooms/peace_room.jpeg" style="width:100%">
-
-	<div class="text">Newly Wed's Room</div>
-
-  </div>
-
-
-
-  <div class="mySlides fade">
-
-	<div class="numbertext">3 / 4</div>
-
-	<img src="/images/rooms/cloud_room.jpeg" style="width:100%">
-
-	<div class="text">Family Room</div>
-
-  </div>
-
-  
-
-  <div class="mySlides fade">
-
-	<div class="numbertext">4 / 4</div>
-
-	<img src="images/rooms/tranquility_room.jpeg" style="width:100%">
-
-	<div class="text">King size beds</div>
-
-  </div>
-
-
-
-  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-
-  <a class="next" onclick="plusSlides(1)">&#10095;</a>
-
-</div>
-
-<br>
-
-
-
-<div style="text-align:center">
-
-  <span class="dot" onclick="currentSlide(1)"></span> 
-
-  <span class="dot" onclick="currentSlide(2)"></span> 
-
-  <span class="dot" onclick="currentSlide(3)"></span>
-
-  <span class="dot" onclick="currentSlide(4)"></span> 
-
-</div>
-
-
-
-<script>
-
-	var slideIndex = 1;
-
-	showSlides(slideIndex);
-
-
-
-	function plusSlides(n) {
-
-	  showSlides(slideIndex += n);
-
-	}
-
-
-
-	function currentSlide(n) {
-
-	  showSlides(slideIndex = n);
-
-	}
-
-
-
-	function showSlides(n) {
-
-	  var i;
-
-	  var slides = document.getElementsByClassName("mySlides");
-
-	  var dots = document.getElementsByClassName("dot");
-
-	  if (n > slides.length) {slideIndex = 1} 
-
-	  if (n < 1) {slideIndex = slides.length}
-
-	  for (i = 0; i < slides.length; i++) {
-
-		  slides[i].style.display = "none"; 
-
-	  }
-
-	  for (i = 0; i < dots.length; i++) {
-
-		  dots[i].className = dots[i].className.replace(" active", "");
-
-	  }
-
-	  slides[slideIndex-1].style.display = "block"; 
-
-	  dots[slideIndex-1].className += " active";
-
-	}
-
-</script>
+        <div class="container">
+          <h2>Slideshow Indicators</h2>
+          <p>An example of using buttons to indicate how many slides there are in the slideshow, and which slide the user is currently viewing.</p>
+        </div>
+        
+        <div class="content display-container" style="max-width:800px">
+          <img class="mySlides" src="images/rooms/serenity_room.jpeg" alt="Couple's room="width:100%">
+          <img class="mySlides" src="images/rooms/peace_room.jpeg" alt="Newly Wed's Room="width:100%">
+          <img class="mySlides" src="/images/rooms/cloud_room.jpeg" alt="Family Room="style="width:100%">
+          <div class="center container section large text-white display-bottommiddle" style="width:100%">
+            <div class="left hover-text-khaki" onclick="plusDivs(-1)">&#10094;</div>
+            <div class="right hover-text-khaki" onclick="plusDivs(1)">&#10095;</div>
+            <span class="badge demo border transparent hover-white" onclick="currentDiv(1)"></span>
+            <span class="badge demo border transparent hover-white" onclick="currentDiv(2)"></span>
+            <span class="badge demo border transparent hover-white" onclick="currentDiv(3)"></span>
+          </div>
+        </div>
+        
+        <script>
+        var slideIndex = 1;
+        showDivs(slideIndex);
+        
+        function plusDivs(n) {
+          showDivs(slideIndex += n);
+        }
+        
+        function currentDiv(n) {
+          showDivs(slideIndex = n);
+        }
+        
+        function showDivs(n) {
+          var i;
+          var x = document.getElementsByClassName("mySlides");
+          var dots = document.getElementsByClassName("demo");
+          if (n > x.length) {slideIndex = 1}
+          if (n < 1) {slideIndex = x.length}
+          for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";  
+          }
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" white", "");
+          }
+          x[slideIndex-1].style.display = "block";  
+          dots[slideIndex-1].className += " white";
+        }
+        </script>
 
     <!-- END SLIDESHOW GALLERY HTML -->
 
