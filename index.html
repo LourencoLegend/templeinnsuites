@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -5,14 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="This is the home/landing page for the Temple Inn and Suites Website. It displays pieces of information regarding this fictional hotel."
+      content="This is the home/landing page for the Temple Inn and Suites Website. It displays snippets of information regarding this fictional hotel."
     />
 
     <!--CSS Files-->
     <link rel="stylesheet" href="css/base.css" />
     <link rel="stylesheet" href="css/medium.css" />
     <link rel="stylesheet" href="css/large.css" />
-
+    <link rel="stylesheet" type="text/css" href="styles/normalize.css">
     <!--Fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -158,30 +159,8 @@
         <button><a href="">See More Temples!</a></button>
       </div>
 
-      <div class="box weather seven">
-        <h2>Weather</h2>
-        <h3>Recife Brazil</h3>
-        <p>Sun July 17th</p>
-        <!--<img src="" alt="Weather Icon" />-->
-        <h3>69 °F</h3>
-        <p>Rainy</p>
-        <h3>18%</h3>
-        <p>Precipitation</p>
-        <h3>8mph</h3>
-        <p>Wind</p>
-        <h3>78%</h3>
-        <p>Humidity</p>
-        <!--<img src="" alt="Weather Icon" />-->
-        <h3>Mon</h3>
-        <p>77 °F</p>
-        <!--<img src="" alt="Weather Icon" />-->
-        <h3>Tue</h3>
-        <p>76 °F</p>
-        <!--<img src="" alt="Weather Icon" />-->
-        <h3>Wed</h3>
-        <p>75 °F</p>
-      </div>
-
+      <div id="openweathermap-widget-5"></div>
+<script>window.myWidgetParam ? window.myWidgetParam : window.myWidgetParam = [];  window.myWidgetParam.push({id: 5,cityid: '3390760',appid: '4a560932da68c6d09051ac9825c6d318',units: 'imperial',containerid: 'openweathermap-widget-5',  });  (function() {var script = document.createElement('script');script.async = true;script.charset = "utf-8";script.src = "//openweathermap.org/themes/openweathermap/assets/vendor/owm/js/weather-widget-generator.js";var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(script, s);  })();</script>
       <div class="box eight">
         <h2>Contact Info</h2>
         
@@ -201,7 +180,7 @@
           Parnamirim
           52060-380 Recife - PE, Brazil</p>
         <p>Headquarters</p>
-        <p>Bethesda, MD</p>
+        <p>4847 Montgomery Ln #300, Bethesda, MD 20814 .Bethesda, MD</p>
         <p>©2022 Lourenco Da Silva | BYU-Idaho</p>
       </div>
       <script src="js/index.js"></script>
